@@ -183,3 +183,28 @@ quotaDonationBtn.addEventListener("click", function () {
         return;
     }
 });
+
+
+// donation & history button functionality
+let donationBtn = document.getElementById("donation-btn");
+let historyBtn = document.getElementById("history-btn");
+
+historyBtn.addEventListener("click", function () {
+    historyBtn.classList.add("bg-lime-300", "border-none", "text-black");
+    historyBtn.classList.remove("text-gray-500");
+    donationBtn.classList.add("border-[3px]", "text-gray-500");
+    donationBtn.classList.remove("bg-lime-300", "border-none", "text-black");
+
+    document.getElementById("cards").classList.add("hidden");
+    document.getElementById("donation-history").classList.remove("hidden");
+});
+
+donationBtn.addEventListener("click", function () {
+    donationBtn.classList.add("bg-lime-300", "border-none", "text-black");
+    donationBtn.classList.remove("border-[2px]", "text-gray-400");
+    historyTab.classList.add("text-gray-500");
+    historyBtn.classList.remove("bg-lime-300", "border-none", "text-black");
+
+    document.getElementById("cards").classList.remove("hidden");
+    document.getElementById("donation-history").classList.add("hidden");
+});
