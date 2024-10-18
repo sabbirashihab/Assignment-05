@@ -24,27 +24,42 @@
 
             <!-- blog button at left -->
             <button
-              class="bg-lime-300 mx-auto py-3 px-5 rounded-lg text-lg font-bold sm:mb-5 sm:w-[70%] lg:w-32 transform transition-all duration-700 hover:bg-gray-300 hover:scale-90"
-              onclick="window.location.href='blog.html'">
-              Blog
+                class="bg-lime-300 mx-auto py-3 px-5 rounded-lg text-lg font-bold sm:mb-5 sm:w-[70%] lg:w-32 transform transition-all duration-700 hover:bg-gray-300 hover:scale-90"
+                onclick="window.location.href='blog.html'">
+                Blog
             </button>
-      
+
             <!-- Donate Bangladesh title at middle -->
             <div class="flex items-center gap-5 sm:mx-auto justify-center">
-              <img src="assets/logo.png" alt="" />
-              <p class="font-extrabold text-3xl">Donate Bangladesh</p>
+                <img src="assets/logo.png" alt="" />
+                <p class="font-extrabold text-3xl">Donate Bangladesh</p>
             </div>
-      
+
             <!-- available balance at right -->
             <div class="flex items-center justify-center gap-5 sm:mx-auto sm:mt-5">
-              <img src="assets/coin.png" alt="" />
-              <p class="text-xl font-bold">
-                <span id="available-balance">10000</span>
-                <span> BDT </span>
-              </p>
+                <img src="assets/coin.png" alt="" />
+                <p class="text-xl font-bold">
+                    <span id="available-balance">10000</span>
+                    <span> BDT </span>
+                </p>
             </div>
-      
-          </nav>
+
+        </nav>
+
+        <!-- donation & history buttons -->
+        <div class="flex justify-center gap-5 my-10">
+
+            <button id="donation-btn"
+                class="bg-lime-300 py-3 px-5 border-none rounded-lg font-bold text-black transform transition-all duration-700 hover:bg-gray-300 hover:scale-90">
+                Donation
+            </button>
+
+            <button id="history-btn"
+                class="bg-white py-3 px-5 border-[3px] rounded-lg font-bold text-gray-500 transform transition-all duration-700 hover:bg-gray-300 hover:scale-90">
+                History
+            </button>
+
+        </div>
 
     </header>
 
