@@ -118,3 +118,68 @@ noakhaliDonationBtn.addEventListener("click", function () {
         return;
     }
 });
+
+
+// donation logic for Feni part
+let feniDonationBtn = document.getElementById("feni-donation-btn");
+
+feniDonationBtn.addEventListener("click", function () {
+    let donateFeniInput = document.getElementById("feni-input").value.trim(); // trim removes whitespaces
+
+    if (!isValidNumber(donateFeniInput)) {
+        alert("Invalid Amount!! Please enter a valid amount.");
+        return;
+    }
+
+    let donationAmoutForFeni = parseFloat(donateFeniInput);
+
+    // checking if donor has enough balance
+    if (donationAmoutForFeni > availableBalance) {
+        alert("You do not have sufficient balace to donate this amount.");
+        return;
+    } else if (donationAmoutForFeni > 0) {
+        availableBalance -= donationAmoutForFeni;
+        feniBalance += donationAmoutForFeni;
+
+        document.getElementById("available-balance").innerText = availableBalance;
+        document.getElementById("feni-balance").innerText = feniBalance;
+
+        showModal();
+        displayDonationHistory(donationAmoutForFeni, "Feni");
+    } else {
+        alert("Invalid Amount!! Please enter a valid amount.");
+        return;
+    }
+});
+
+// donation logic for Qouta part
+let quotaDonationBtn = document.getElementById("quota-donation-btn");
+
+quotaDonationBtn.addEventListener("click", function () {
+    let donateQuotaInput = document.getElementById("quota-input").value.trim(); // trim removes whitespaces
+
+    if (!isValidNumber(donateQuotaInput)) {
+        alert("Invalid Amount!! Please enter a valid amount.");
+        return;
+    }
+
+    let donationAmoutForQuota = parseFloat(donateQuotaInput);
+
+    // checking if donor has enough balance
+    if (donationAmoutForQuota > availableBalance) {
+        alert("You do not have sufficient balace to donate this amount.");
+        return;
+    } else if (donationAmoutForQuota > 0) {
+        availableBalance -= donationAmoutForQuota;
+        quotaBalance += donationAmoutForQuota;
+
+        document.getElementById("available-balance").innerText = availableBalance;
+        document.getElementById("quota-balance").innerText = quotaBalance;
+
+        showModal();
+        displayDonationHistory(donationAmoutForQuota, "Quota");
+    } else {
+        alert("Invalid Amount!! Please enter a valid amount.");
+        return;
+    }
+});
