@@ -61,3 +61,28 @@ function displayDonationHistory(amount, donationFor) {
 
   document.getElementById("donation-history").appendChild(donationCard);
 }
+
+// function to check the validity of user input (if valid number or not)
+function isValidNumber(input) {
+
+    let decimalCount = 0;
+  
+    for (let i = 0; i < input.length; i++) {
+  
+      let char = input[i];
+  
+      if (char >= "0" && char <= "9") {
+        continue;
+      } else if (char === ".") {
+        decimalCount++;
+        if (decimalCount > 1) {
+          return false; // more than 1 decimal point is not acceptable
+        }
+      } else {
+        return false; // any character other than a number or decimal point (.) is not acceptable
+      }
+    }
+  
+    // inout cannot be 0 or just a point (.)
+    return input.length > 0 && input !== ".";
+  }
