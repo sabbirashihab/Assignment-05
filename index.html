@@ -20,6 +20,32 @@
 
     <header>
 
+        <nav class="bg-orange-50 mx-auto grid sm:grid-cols-1 md:grid-cols-3 md:justify-between py-7">
+
+            <!-- blog button at left -->
+            <button
+              class="bg-lime-300 mx-auto py-3 px-5 rounded-lg text-lg font-bold sm:mb-5 sm:w-[70%] lg:w-32 transform transition-all duration-700 hover:bg-gray-300 hover:scale-90"
+              onclick="window.location.href='blog.html'">
+              Blog
+            </button>
+      
+            <!-- Donate Bangladesh title at middle -->
+            <div class="flex items-center gap-5 sm:mx-auto justify-center">
+              <img src="assets/logo.png" alt="" />
+              <p class="font-extrabold text-3xl">Donate Bangladesh</p>
+            </div>
+      
+            <!-- available balance at right -->
+            <div class="flex items-center justify-center gap-5 sm:mx-auto sm:mt-5">
+              <img src="assets/coin.png" alt="" />
+              <p class="text-xl font-bold">
+                <span id="available-balance">10000</span>
+                <span> BDT </span>
+              </p>
+            </div>
+      
+          </nav>
+
     </header>
 
     <main>
